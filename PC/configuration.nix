@@ -172,8 +172,6 @@
       fonts = with pkgs; [
         dejavu_fonts
         source-code-pro
-#        source-sans-pro
-#        source-serif-pro
         cm_unicode
         font-awesome_4
       #  google-fonts
