@@ -1,0 +1,12 @@
+general {
+        output_format = "i3bar"
+	separator = " "
+        Colors = true
+        interval = 1
+}
+
+order = "time"
+
+time  {
+   format  = "  %d.%m.%y  %H:%M"
+}

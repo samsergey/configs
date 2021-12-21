@@ -1,0 +1,29 @@
+markup=pango
+full_text= 
+align=center
+color=#bada55
+separator=false
+separator_block_width=5
+
+[title]
+align=center
+min_width=1500
+command=xtitle
+interval=1
+color=#ff8844
+
+[separator]
+
+[date]
+command=echo "`date +'%a %d %b'`"
+interval=1
+label=
+color=#5566aa
+
+[separator]
+
+[time]
+command=echo "`date +'%H:%M'`"
+interval=1
+label=
+color=#33aa44
