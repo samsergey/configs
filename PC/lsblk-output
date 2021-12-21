@@ -1,0 +1,11 @@
+NAME   LABEL       MAJ:MIN   SIZE FSTYPE MOUNTPOINTS          UUID
+sda                  8:0   119.2G                             
+├─sda1 nixos         8:1     100G ext4   /                    266749a0-8e4f-4528-9ac2-f50dccfbfcc4
+├─sda2 swap          8:2    18.7G swap   [SWAP]               b4256e33-c622-4f55-90db-eb0707d67fcf
+└─sda3 boot          8:3     511M vfat   /boot                2C47-78B8
+sdb                  8:16  465.8G                             
+├─sdb1 store         8:17   97.7G ext4   /nix/store           2e7662bf-e3a9-4fc5-bebb-e20045e01474
+│                                        /nix                 
+└─sdb2 home          8:18  368.1G ext4   /home                6b4d35d3-d7e1-4a8e-8463-116e92f55a31
+sdc                  8:32  232.9G                             
+└─sdc1 Seagate250G   8:33  232.9G ext4   /home/sergey/archive 7e62ab11-ed1e-4a1d-a993-87c7201772ff
