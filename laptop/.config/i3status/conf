@@ -1,0 +1,18 @@
+general {
+        output_format = "i3bar"
+	separator = " "
+        Colors = true
+        interval = 1
+}
+
+order = "time"
+order += "wireless wlan0"
+
+wifi {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+time  {
+   format  = "  %d.%m.%y  %H:%M"
+}
