@@ -140,8 +140,11 @@
     xarchiver
     xorg.xkill
     youtube-dl
+    #gdrivefs
   ];
 
+  nixpkgs.config.allowBroken = true;
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -178,6 +181,17 @@
     autorun = true;
     libinput.enable = true; # touchpad support.
     desktopManager.xfce.enable = true;
+    # windowManager.exwm.enable = true;
+    # displayManager = {
+    #   defaultSession = "xfce+exwm";
+    #   autoLogin = {
+    #     enable = true;
+    #     user = "sergey";
+    #   };
+    #   lightdm = {
+    #     enable = true;
+    #   };
+    # };
     windowManager.i3.enable = true;
     displayManager = {
       defaultSession = "none+i3";
