@@ -121,6 +121,7 @@
     haskellPackages.fingertree
     haskellPackages.hspec
     haskellPackages.haskell-lsp
+    pandoc
     
     gnome3.networkmanagerapplet
     lxqt.lxqt-policykit
@@ -222,6 +223,7 @@
     printing.enable = true;
     avahi.enable = true;
     avahi.nssmdns = true;
+    emacs.enable = true;
   };
 
   # Enable the KDE Desktop Environment.
