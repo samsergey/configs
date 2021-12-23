@@ -57,7 +57,7 @@ bindsym $mod+Return exec lilyterm
 #bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+w exec chromium
+bindsym $mod+w exec vivaldi
 bindsym $mod+e exec emacs
 bindsym $mod+Home exec pcmanfm
 bindsym $mod+o exec libreoffice
