@@ -50,7 +50,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (flycheck-haskell flymd magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode)))
+    (tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode)))
  '(save-place-mode t nil (saveplace))
  '(show-paren-mode t)
  '(smooth-scroll/hscroll-step-size 1)
@@ -279,6 +279,14 @@
 
 (add-hook 'elm-mode-hook `hasklig-mode)
 
+(use-package flycheck-aspell
+  :ensure t)
+
+(defun markdown-html (buffer)
+  (princ (with-current-buffer buffer
+    (format "<!DOCTYPE html><html><head><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head><title>Impatient Markdown</title><xmp theme=\"united\" style=\"display:none;\"> %s  </xmp><script src=\"http://strapdownjs.com/v/0.2/strapdown.js\"></script></html>" (buffer-substring-no-properties (point-min) (point-max))))
+  (current-buffer)))
+
 ;; ----------------------------------------------------------------------
 ;; HASKELL
 
@@ -314,6 +322,12 @@
    '(haskell-svg-render-images t)
    '(haskell-process-show-debug-tips 'nil))
 
+(use-package impatient-mode
+  :ensure t
+  :config
+  (imp-set-user-filter 'markdown-html))
+
+
 (use-package flymake-haskell-multi
   :ensure t)
 
@@ -322,6 +336,10 @@
   :ensure t
   :init
   (global-flycheck-mode t))
+
+(use-package flycheck-haskell
+  :ensure t
+  :hook (flycheck-mode-hook . #'flycheck-haskell-setup))
 
 (use-package yasnippet
   :ensure t)
