@@ -43,7 +43,7 @@
  '(js2-strict-missing-semi-warning nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode))
+   '(ac-haskell-process yaml-mode magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode))
  '(save-place-mode t nil (saveplace))
  '(show-paren-mode t)
  '(smooth-scroll/hscroll-step-size 1)
@@ -270,6 +270,15 @@
 ;(load "~/work/webinar/webfigs/emacs-settings.el")
 
 (add-hook 'elm-mode-hook `hasklig-mode)
+
+;; ----------------------------------------------------------------------
+;; LANGUAGES
+
+(use-package yaml-mode
+  :ensure t)
+
+(use-package nix-mode
+  :ensure t)
 
 ;; ----------------------------------------------------------------------
 ;; HASKELL

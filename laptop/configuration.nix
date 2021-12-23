@@ -84,7 +84,8 @@
     emacs
     numix-icon-theme
     pcmanfm
-    chromium
+    #chromium
+    vivaldi
     photoqt
     vlc
     gimp
@@ -140,10 +141,15 @@
     xarchiver
     xorg.xkill
     youtube-dl
-    #gdrivefs
+    yandex-disk
   ];
 
-  nixpkgs.config.allowBroken = true;
+  nixpkgs = {
+    config = {
+      allowBroken = true;
+      allowUnfree = true;
+    };
+  };
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -213,6 +219,9 @@
   services = {
     gvfs.enable = true;
     blueman.enable = true;
+    printing.enable = true;
+    avahi.enable = true;
+    avahi.nssmdns = true;
   };
 
   # Enable the KDE Desktop Environment.
@@ -223,7 +232,7 @@
   users.users.sergey = {
     isNormalUser = true;
     home = "/home/sergey"; 
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "sys" "lp" ]; # Enable ‘sudo’ for the user.
     shell = "/run/current-system/sw/bin/fish";
   };
 
@@ -246,7 +255,7 @@
       };
     };
 
-  nixpkgs.config.allowUnfree = true;
+
   
 
   # This value determines the NixOS release from which the default
