@@ -82,6 +82,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [ 
     emacs
+    emacs-all-the-icons-fonts
     numix-icon-theme
     pcmanfm
     #chromium
@@ -122,6 +123,7 @@
     haskellPackages.hspec
     haskellPackages.haskell-lsp
     pandoc
+    haskellPackages.hindent
     
     gnome3.networkmanagerapplet
     lxqt.lxqt-policykit

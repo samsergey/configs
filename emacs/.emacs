@@ -31,12 +31,13 @@
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes '(wombat))
  '(custom-safe-themes
-   '("8e57da9e594e7eb3a67952a58098e300b2a3be8c7b24bdf5f5b770f0746f7fb5" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" "dd4db38519d2ad7eb9e2f30bc03fba61a7af49a185edfd44e020aa5345e3dca7" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "01e067188b0b53325fc0a1c6e06643d7e52bc16b6653de2926a480861ad5aa78" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "e30f381d0e460e5b643118bcd10995e1ba3161a3d45411ef8dfe34879c9ae333" "9b1c580339183a8661a84f5864a6c363260c80136bd20ac9f00d7e1d662e936a" "d21135150e22e58f8c656ec04530872831baebf5a1c3688030d119c114233c24" "73a13a70fd111a6cd47f3d4be2260b1e4b717dbf635a9caee6442c949fad41cd" "cf284fac2a56d242ace50b6d2c438fcc6b4090137f1631e32bedf19495124600" "228c0559991fb3af427a6fa4f3a3ad51f905e20f481c697c6ca978c5683ebf43" "66aea5b7326cf4117d63c6694822deeca10a03b98135aaaddb40af99430ea237" "de0b7245463d92cba3362ec9fe0142f54d2bf929f971a8cdf33c0bf995250bcf" "107420ec61832543bd769e5d6764bedb41ec3d2f8cd4d53a407f7aa74b493dac" "6db9acac88c82f69296751e6c6d808736d6ff251dcb34a1381be86efc14fef54" "64ca5a1381fa96cb86fd6c6b4d75b66dc9c4e0fc1288ee7d914ab8d2638e23a9" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "af717ca36fe8b44909c984669ee0de8dd8c43df656be67a50a1cf89ee41bde9a" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default))
+   '("a96c80b229f3605f1c7171cf109944be284f8dca58a5384a20e9320a6e19eb8c" "8c01cb4cf9ee298d30a0456b1e90c575d8f5a047e35a5380a5f955c59ed17d2f" "d2a14f85e1ba5b28433b96e4628444a4c6a2334368ddc2d568b06eb631492681" "e6cdd07a8475458edf8dfd8b5cb3d81c6bb9aa0cb8535322c21d2e242dd044ed" "8e57da9e594e7eb3a67952a58098e300b2a3be8c7b24bdf5f5b770f0746f7fb5" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" "dd4db38519d2ad7eb9e2f30bc03fba61a7af49a185edfd44e020aa5345e3dca7" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "01e067188b0b53325fc0a1c6e06643d7e52bc16b6653de2926a480861ad5aa78" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "e30f381d0e460e5b643118bcd10995e1ba3161a3d45411ef8dfe34879c9ae333" "9b1c580339183a8661a84f5864a6c363260c80136bd20ac9f00d7e1d662e936a" "d21135150e22e58f8c656ec04530872831baebf5a1c3688030d119c114233c24" "73a13a70fd111a6cd47f3d4be2260b1e4b717dbf635a9caee6442c949fad41cd" "cf284fac2a56d242ace50b6d2c438fcc6b4090137f1631e32bedf19495124600" "228c0559991fb3af427a6fa4f3a3ad51f905e20f481c697c6ca978c5683ebf43" "66aea5b7326cf4117d63c6694822deeca10a03b98135aaaddb40af99430ea237" "de0b7245463d92cba3362ec9fe0142f54d2bf929f971a8cdf33c0bf995250bcf" "107420ec61832543bd769e5d6764bedb41ec3d2f8cd4d53a407f7aa74b493dac" "6db9acac88c82f69296751e6c6d808736d6ff251dcb34a1381be86efc14fef54" "64ca5a1381fa96cb86fd6c6b4d75b66dc9c4e0fc1288ee7d914ab8d2638e23a9" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "af717ca36fe8b44909c984669ee0de8dd8c43df656be67a50a1cf89ee41bde9a" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" default))
  '(default-input-method "TeX")
  '(elm-indent-after-keywords '(("of" 2) ("in" 2 0) ("{" 2) "if" "then" "else" "let"))
  '(elm-indent-offset 2)
  '(fci-rule-color "#383838")
  '(font-use-system-font t)
+ '(hindent-extra-args nil)
  '(inhibit-startup-screen t)
  '(initial-major-mode 'text-mode)
  '(initial-scratch-message nil)
@@ -44,7 +45,7 @@
  '(markdown-command "pandoc")
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(pandoc-mode tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode))
+   '(all-the-icons hindent pandoc-mode tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode))
  '(save-place-mode t nil (saveplace))
  '(show-paren-mode t)
  '(smooth-scroll/hscroll-step-size 1)
@@ -200,10 +201,6 @@
 (global-set-key "\C-d" 'delete-backward-char)
 (global-set-key "\C-cv" 'visual-line-mode)
 
-;(load "~/.emacs.d/haskell-mode-settings.el")
-;(load "~/.emacs.d/multiple-cursors-settings.el")
-
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -226,10 +223,13 @@
 
 (put 'downcase-region 'disabled nil)
 
+(use-package all-the-icons
+  :ensure t)
+
 (use-package airline-themes
   :ensure t
   :config
-  ;(load-theme 'airline-papercolor)
+  (load-theme 'airline-dark_minimal)
   :custom
   (setq powerline-utf-8-separator-left        #xe0b0
 	powerline-utf-8-separator-right       #xe0b2
@@ -241,10 +241,6 @@
 	airline-utf-glyph-readonly            #xe0a2
 	airline-utf-glyph-linenumber          #xe0a1))
 
-
-;(global-set-key "\C-M-m" 'tun-on-mouse)
-;(global-set-key "\C-down-mouse-2" 'tun-off-mouse)
-
 (use-package beacon
   :ensure t
   :config
@@ -254,11 +250,6 @@
 
 (put 'upcase-region 'disabled nil)
 
-;(use-package mode-icons
-;  :ensure t
-;  :config
-;  (mode-icons-mode))
-
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (add-hook 'js2-mode-hook
@@ -266,10 +257,6 @@
 	     (font-lock-add-keywords 
 	      nil 
 	      `(("new *\\(\\w+\\)" 1 'haskell-constructor-face t)))))
-
-;(load "~/work/webinar/webfigs/livescript-mode.el")
-;(load "~/work/webinar/webfigs/emacs-settings.el")
-
 
 ;; ----------------------------------------------------------------------
 ;; LANGUAGES
@@ -284,7 +271,6 @@
   :ensure t
   :config
   (add-hook 'markdown-mode-hook 'pandoc-mode))
-
 
 (use-package yaml-mode
   :ensure t)
@@ -304,12 +290,18 @@
 		      :weight 'normal
 		      :width 'normal))
 
+(use-package hindent
+  :ensure t
+  :config
+  (setq hindent-reformat-buffer-on-save t))
+
 (use-package haskell-mode
   :ensure t
   :hook
   ((haskell-mode . hasklig-mode)
    (haskell-mode . interactive-haskell-mode)
-   (haskell-mode . flymake-haskell-multi-load))
+   (haskell-mode . flymake-haskell-multi-load)
+   (haskell-mode . hindent-mode))
   :config
   (hasklig-mode t)
   :bind
@@ -327,16 +319,9 @@
    '(haskell-svg-render-images t)
    '(haskell-process-show-debug-tips 'nil))
 
-(use-package impatient-mode
-  :ensure t
-  :config
-  (imp-set-user-filter 'markdown-html))
-
-
 (use-package flymake-haskell-multi
   :ensure t)
 
-; LSP
 (use-package flycheck
   :ensure t
   :init
@@ -371,11 +356,6 @@
   :config
   (add-to-list 'eglot-server-programs '(haskell-mode . ("ghcide" "--lsp"))))
 
-
-;; (load "~/.emacs.d/ghcid.el")
-
-;(load "~/.emacs.d/hasklig-mode-master/hasklig-mode.el")
-
 (defun load-and-switch ()
   (interactive)
   ;(inferior-haskell-load-file)
@@ -386,8 +366,4 @@
 ;  (interactive)
 ;  (inferior-haskell-reload-file)
 ;  (other-window 1))
-
-;; (require 'lsp)
-;; (require 'lsp-haskell)
-;; (add-hook 'haskell-mode-hook #'lsp)
 
