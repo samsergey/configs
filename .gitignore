@@ -2,3 +2,5 @@
 .config/libreoffice/
 .config/.emacs.d/
 flycheck_*
+PC/.config/fish/fish_variables
+laptop/.config/fish/fish_variables
