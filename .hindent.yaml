@@ -1,6 +1,6 @@
 indent-size: 2
 line-length: 80
-force-trailing-newline: true
+force-trailing-newline: false
 extensions:
   - DataKinds
   - GADTs

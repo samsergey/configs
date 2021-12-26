@@ -53,7 +53,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (all-the-icons hindent pandoc-mode tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode)))
+    (ormolu all-the-icons hindent pandoc-mode tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode)))
  '(save-place-mode t nil (saveplace))
  '(show-paren-mode t)
  '(smooth-scroll/hscroll-step-size 1)
@@ -298,6 +298,12 @@
 		      :height 125
 		      :weight 'normal
 		      :width 'normal))
+
+;; (use-package ormolu
+;;  :hook (haskell-mode . ormolu-format-on-save-mode)
+;;  :bind
+;;  (:map haskell-mode-map
+;;        ("C-c r" . ormolu-format-buffer)))
 
 (use-package hindent
   :ensure t
