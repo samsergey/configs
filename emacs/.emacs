@@ -206,8 +206,8 @@
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 
-(global-set-key "\M-;" 'toggle-comment-on-line)
-(global-set-key "\C-cr" 'comment-or-uncomment-region)
+;; (global-set-key "\M-;" 'toggle-comment-on-line)
+(global-set-key "\M-;" 'comment-or-uncomment-region)
 (global-set-key "\C-d" 'delete-backward-char)
 (global-set-key "\C-cv" 'visual-line-mode)
 
@@ -343,6 +343,7 @@
    (haskell-mode . interactive-haskell-mode)
    (haskell-mode . flymake-haskell-multi-load)
    (haskell-mode . hindent-mode)
+   (haskell-mode . turn-on-haskell-decl-scan)
    (haskell-mode . global-linum-mode))
   :config
   (hasklig-mode t)
@@ -360,6 +361,7 @@
    '(haskell-process-type (quote auto))
    '(haskell-program-name "stack repl")
    '(haskell-svg-render-images t)
+   '(haskell-decl-scan-add-to-menubar t)
    '(haskell-process-show-debug-tips nil))
 
 
@@ -375,8 +377,11 @@
   :ensure t
   :hook (flycheck-mode-hook . #'flycheck-haskell-setup))
 
-;(use-package yasnippet
-;  :ensure t)
+(use-package yasnippet
+  :ensure t)
+
+(use-package speedbar
+  :ensure t)
 
 (use-package lsp-mode
   :ensure t
