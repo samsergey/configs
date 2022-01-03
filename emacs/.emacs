@@ -9,8 +9,10 @@
 (use-package evil
  :ensure t
  :config
- (evil-mode 'nil)
- (global-flycheck-mode t))
+ (evil-mode 't)
+ (global-flycheck-mode t)
+ :hook
+ ((evil-mode . global-linum-mode)))
 
 (use-package magit
   :ensure t)
@@ -41,6 +43,8 @@
      ("{" 2)
      "if" "then" "else" "let")))
  '(elm-indent-offset 2)
+ '(evil-undo-system (quote undo-fu))
+ '(evil-want-Y-yank-to-eol t)
  '(fci-rule-color "#383838")
  '(font-use-system-font t)
  '(haskell-interactive-popup-errors nil)
@@ -54,11 +58,9 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (evil-tutor ormolu all-the-icons hindent pandoc-mode tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit smooth-scroll airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode)))
+    (undo-fu undo-tree evil-tutor ormolu all-the-icons hindent pandoc-mode tb impatient-mode markdown-preview-mode flycheck-aspell flycheck-haskell magit-status nix-mode yasnippet flycheck haskell-mode hasklig-mode eglot flymake-haskell-multi flymake-haskell-multy hasklig evil-escape hasky-stack hasky-extensions evil which-key use-package lsp-haskell lsp-ui lsp-mode flymake-hlint elm-mode coffee-mode imenu-list minimap js2-mode julia-repl ocodo-svg-modelines beacon popwin magit airline-themes spaceline shm intero multiple-cursors markup-faces markdown-mode)))
  '(save-place-mode t nil (saveplace))
  '(show-paren-mode t)
- '(smooth-scroll/hscroll-step-size 1)
- '(smooth-scroll/vscroll-step-size 1)
  '(tool-bar-mode nil)
  '(tooltip-mode t)
  '(vc-annotate-background "#2B2B2B")
@@ -98,16 +100,6 @@
 
 ;Make the mouse jump away when you type over it.
 (mouse-avoidance-mode 'cat-and-mouse)
-
-;; Параметры скроллинга
-(use-package smooth-scroll
-  :ensure t
-  :init
-  (setq scroll-margin 3)
-  (setq scroll-step 1)
-  (setq scroll-preserve-screen-position nil)
-  :config
-  (smooth-scroll-mode t))
 
 (defun turn-on-mouse (&optional frame)
   "Making touchpad more handy."
@@ -343,6 +335,7 @@
    (haskell-mode . interactive-haskell-mode)
    (haskell-mode . flymake-haskell-multi-load)
    (haskell-mode . hindent-mode)
+   (haskell-mode . evil-mode)
    (haskell-mode . turn-on-haskell-decl-scan)
    (haskell-mode . global-linum-mode))
   :config
