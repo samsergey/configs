@@ -235,3 +235,4 @@ exec xrandr --output HDMI-0 --auto --left-of eDP
 # exec syndaemon -i 1 -K -d &
 # exec setxkbmap -option "" -layout "us,ru" -option  grp:alt_shift_toggle
 exec nm-applet &
+exec blueman-applet &

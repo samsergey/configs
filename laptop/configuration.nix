@@ -13,6 +13,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable=true;
@@ -83,7 +84,7 @@
   environment.systemPackages = with pkgs; [ 
     emacs
     emacs-all-the-icons-fonts
-    numix-icon-theme
+    numix-icon-theme-circle
     pcmanfm
     #chromium
     vivaldi
@@ -190,17 +191,6 @@
     autorun = true;
     libinput.enable = true; # touchpad support.
     desktopManager.xfce.enable = true;
-    # windowManager.exwm.enable = true;
-    # displayManager = {
-    #   defaultSession = "xfce+exwm";
-    #   autoLogin = {
-    #     enable = true;
-    #     user = "sergey";
-    #   };
-    #   lightdm = {
-    #     enable = true;
-    #   };
-    # };
     windowManager.i3.enable = true;
     displayManager = {
       defaultSession = "none+i3";
