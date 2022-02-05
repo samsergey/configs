@@ -1,0 +1,45 @@
+markup=pango
+full_text= 
+align=center
+color=#bada55
+separator=false
+separator_block_width=5
+
+[title]
+align=left
+#min_width=100
+command=xtitle
+interval=1
+color=#ff8844
+
+[separator]
+
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[click]
+full_text=
+command="wpa_gui"
+
+[date]
+command=echo "`date +'%a %d %b'`"
+interval=1
+color=#5566aa
+
+[separator]
+
+[time]
+command=echo "`date +'%H:%M'`"
+interval=1
+color=#33aa44
+
+[separator]
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+command=echo "`acpi -b | grep -E -o '[0-9][0-9]?[0-9]?%'`"
+label=⚡
+interval=30

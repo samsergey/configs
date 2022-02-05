@@ -1,0 +1,1 @@
+set -U fish_user_paths ~/.npm-global/bin $fish_user_paths

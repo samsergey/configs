@@ -1,0 +1,32 @@
+general {
+        #output_format = "dzen2"
+        Colors = true
+        interval = 5
+	color_good = "#BBBBBB"
+	color_bad = "#CC1616"
+	color_degraded = "#55858E"
+}
+
+Order += "wireless wlo1"
+order += "battery 0"
+order += "tztime local"
+
+wireless wlo1 {
+        format_up = "W: (%quality at %essid, %bitrate)"
+        format_down = "W: down"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining"
+        format_down = "No battery"
+        status_chr = "⚇ CHR"
+        status_bat = "⚡ BAT"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT1/uevent"
+        low_threshold = 10
+	integer_battery_capacity = true
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
